@@ -1,21 +1,51 @@
+import { useEffect, useState } from 'react';
 import LogoR from '../../assets/images/rLogo-part.png';
 import LogoK from '../../assets/images/kLogo-part.png';
+import AnimatedLetters from '../AnimatedLetters';
 import { Link } from 'react-router-dom';
 import './index.scss';
 
 const Home = () => {
+    const[letterClass,setLetterClass] = useState('text-animate');
+    const firstNameArray = "andy".split('');
+    const lastNameArray = "insley".split('');
+    const jobArray = "developer & designer".split(''); 
 
+    useEffect(() => {
+        
+        let timeoutId = setTimeout(() => {
+            setLetterClass('text-animate-hover')
+        }, 4000)
+        
+        return () => {
+                    clearTimeout(timeoutId)
+                }
+    }, [])
+
+    console.log(letterClass)
     return(
         <div className="container home-page">
             <div className="text-zone">
-                <h1>Hi, <br /> I'm
+                <h1>
+                <span className={letterClass}>H</span>
+                <span className={`${letterClass} _11`}>i,</span>
+                <span className={`${letterClass} _11`}>{' '}</span>
+                <span className={`${letterClass} _13`}> I</span>
+                 <span className={`${letterClass} _14`}>'m</span><br />
                 <img className="imgR" src={LogoR} alt="developer" />
-                andy<img className="imgK" src={LogoK} alt="developer" />insley
+                <AnimatedLetters letterClass={letterClass} 
+                strArray={firstNameArray}
+                idx={15}/><img className="imgK" src={LogoK} alt="developer" />
+                <AnimatedLetters letterClass={letterClass} 
+                strArray={lastNameArray}
+                idx={16}/>
                 <br />
-                developer & designer
+                <AnimatedLetters letterClass={letterClass} 
+                strArray={jobArray}
+                idx={3}/>
                  </h1>
                  <h2>front-end - web - game - multimedia</h2>
-                 <Link to='/contact' className="flat-button">CONTACT ME</Link>
+                 <button href className="flat-button"><a href="mailto:rkinsley147@gmail.com">CONTACT ME</a></button>
                 </div>
         </div>
     );
