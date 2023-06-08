@@ -4,8 +4,9 @@
         left: 10%;
         top: 50%;
         transform: translateY(-50%);
-        width: 40%;
+        width: 50%;
         max-height: 90%;
+        padding-left: 10px;
     }
 
     h1{
@@ -33,15 +34,15 @@
             color:#F5D061;
             font-size: 18px;
             position: absolute;
-            margin-top: 18px;
-            margin-left: 20px;
+            margin-top: 48px;
+            margin-left: -100px;
             opacity: 0.6;
             animation: fadeIn;            
         }
 
         .imgR{
             width: 32px;
-            margin-left: 15px;
+            margin-left: 0px;
             opacity: 0;
             height: auto;
             animation: animate-slide-down .75s linear both;
@@ -50,7 +51,7 @@
             @keyframes animate-slide-down {
                 0% {
                     opacity: 0;
-                    transform: translate(0,-20px);
+                    transform: translate(-20px,0px);
                     }
                     100% {
                         opacity: 1;
@@ -71,7 +72,7 @@
             @keyframes animate-slide-up {
                 0% {
                     opacity: 0;
-                    transform: translate(0, 20px);
+                    transform: translate(0, -20px);
                     }
                     100% {
                         opacity: 1;
@@ -90,10 +91,12 @@
         font-family: sans-serif;
         letter-spacing: 3px;
         animation: fadeIn 1s 1.8s backwards;
+        overflow: visible;
     }
 
     .flat-button{
         color: #F5D061;
+        background-color:#282F44;;
         font-size: 14;
         font-weight: 400;
         letter-spacing: 4px;
@@ -109,6 +112,10 @@
         &:hover{
             background: #F5D061;
             color: #282F44;
+        }
+
+        a{
+            all: unset;
         }
 
     }
