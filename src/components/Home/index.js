@@ -3,6 +3,7 @@ import LogoR from '../../assets/images/rLogo-part.png';
 import LogoK from '../../assets/images/kLogo-part.png';
 import AnimatedLetters from '../AnimatedLetters';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 import './index.scss';
 
 const Home = () => {
@@ -45,8 +46,9 @@ const Home = () => {
                 idx={3}/>
                  </h1>
                  <h2>front-end - web - game - multimedia</h2>
-                 <button href className="flat-button"><a href="mailto:rkinsley147@gmail.com">CONTACT ME</a></button>
-                </div>
+                 <button className="flat-button"><a href="mailto:rkinsley147@gmail.com">CONTACT ME</a></button>
+            </div>
+            <Logo />
         </div>
     );
 };
