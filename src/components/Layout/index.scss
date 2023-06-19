@@ -2,11 +2,13 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    margin-right: 20px;
   }
   
   .top-tags {
     bottom: auto;
-    top: 35px;
+    top: 20px;
+    
   }
   
   .tags {
@@ -38,7 +40,6 @@
     animation-delay: 1s;
   }
   
-  .container.contact-page,
   .container.about-page,
   .container.portfolio-page {
     
@@ -52,7 +53,7 @@
         margin-bottom: 40px;
         left: -10px;
   
-        &:before {
+        &:before{
           content: '<About>';
           font-family: 'La Belle Aurore', cursive;
           color: #F5D061;
@@ -79,7 +80,7 @@
       }
   
       p {
-        font-size: 13px;
+        font-size: 14px;
         color: #fff;
         font-family: sans-serif;
         font-weight: 300;
@@ -112,53 +113,5 @@
       &:hover {
         color: #fff;
       }
-    }
-  }
-  
-  @media screen and (max-width: 1200px) {
-    .page {
-      position: initial;
-    }
-  
-    .container {
-      position: initial;
-      height: auto;
-      min-height: auto;
-  
-      &.contact-page,
-      &.about-page,
-      &.portfolio-page {
-        .text-zone {
-          position: initial;
-          transform: none;
-          width: 100%;
-          display: block;
-          padding: 20px;
-          box-sizing: border-box;
-        }
-      }
-  
-      &.portfolio-page {
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-  
-        h1.page-title {
-          margin-left: 20px;
-          margin-top: 20px;
-        }
-  
-        .image-box {
-          height: 200px;
-          max-width: calc(50% - 10px);
-        }
-      }
-    }
-  
-    .stage-cube-cont {
-      position: initial;
-      width: 100%;
-      height: 0%;
-      overflow: visible;
     }
   }
