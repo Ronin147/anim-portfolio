@@ -21,7 +21,7 @@ const Home = () => {
         return () => {
                     clearTimeout(timeoutId)
                 }
-    }, [])
+    }, []);
 
     console.log(letterClass)
     return(
