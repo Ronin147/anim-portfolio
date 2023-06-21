@@ -1,0 +1,28 @@
+{
+    "portfolio": [
+        {
+            "cover": "/portfolio/1/TT_screenshot.png",
+            "title": "Teaching Textbooks Math Apps",
+            "description": "Javascript, Actionscript, Adobe Air",
+            "url": "https://play.google.com/store/apps/details?id=air.com.tt.math3&hl=en_US&gl=US"
+        },
+        {
+            "cover": "/portfolio/1/cardboard_screenshot.jpg",
+            "title": "SVG Headermaker",
+            "description": "React, Typescript, CSS",
+            "url": "https://research.teachingtextbooksapp.com/r/headermaker/"
+        },
+        {
+            "cover": "/portfolio/1/wastewater_screenshot.png",
+            "title": "Wastewater Virtual Fieldtrip",
+            "description": "Unity3D, C#, design, prototyping",
+            "url": "http://google.com"
+        },
+        {
+            "cover": "/portfolio/1/monet_screenshot.jpg",
+            "title": "Monet Virtual Fieldtrip",
+            "description": "Unity3D, C#, design, prototyping",
+            "url": "http://google.com"
+        }
+    ]
+}
