@@ -1,0 +1,157 @@
+.portfolio-page{
+    padding-left: 100px;
+    padding-right: 50px;
+    width: calc(100% - 150px);
+    position: initial;
+    height: 100%;
+    overflow: auto;
+
+
+        h1 {
+            font-size: 54px;
+            font-family: 'Coolvetica';
+            color: #F5D061;
+            font-weight: 400;
+            margin-left:100px;
+             margin-top: 100px;
+            position: relative;
+            margin-bottom: 40px;
+            left: -10px;
+      
+            &:before{
+              content: '<Projects>';
+              font-family: 'La Belle Aurore', cursive;
+              color: #F5D061;
+              font-size: 18px;
+              position: absolute;
+              margin-top: -10px;
+              left: -10px;
+              opacity: 0.6;
+              line-height: 18px;
+            }
+      
+            &:after {
+              content: '<Projects/>';
+              font-family: 'La Belle Aurore', cursive;
+              color: #F5D061;
+              font-size: 18px;
+              line-height: 18px;
+              position: absolute;
+              left: 140px;
+              bottom: -20px;
+              margin-left: 20px;
+              opacity: 0.6;
+            }
+
+            .text-animate-hover {
+              &:hover {
+                color: #fff;
+              }
+            }
+          
+    }
+    
+    .images-container{
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      padding-bottom: 100px;
+    }
+
+    .image-box{
+      position: relative;
+      flex: 1 1 20%;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 15px;
+      max-width: calc(25% - 10px);
+
+      .portfolio-image{
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .content{
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        padding: 10px 20px;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.5) 0,
+          rgba(0, 0, 0, 1)
+        );
+        bottom: -70px;
+      }
+
+      .title{
+        margin-bottom: 0;
+        margin-top: 0;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+
+      }
+
+      .description{
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .btn{
+        margin-top: 30px;
+        margin-bottom: 10px;
+        padding: 0 24px;
+        height: 40px;
+        line-height:34px;
+        border: 2px solid #F5D061;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #fff;
+        background:transparentize($color: #F5D061, $amount: 0.95);
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        cursor: pointer;
+      }
+
+      .btn:hover{
+        transform: translateY(-2px);
+        background: transparentize($color: #F5D061, $amount: 0);
+      }
+
+      &:after{
+        content:" ";
+        background: linear-gradient(#F5D061, #000);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        opacity: 0;
+      }
+
+      &:hover:after{
+        opacity: 0.85;
+      }
+
+      &:hover .content{
+        bottom: 0;
+        background: transparent;
+      }
+
+    }
+    
+}
+
