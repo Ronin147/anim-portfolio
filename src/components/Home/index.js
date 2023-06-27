@@ -10,7 +10,8 @@ const Home = () => {
     const[letterClass,setLetterClass] = useState('text-animate');
     const firstNameArray = "andy".split('');
     const lastNameArray = "insley".split('');
-    const jobArray = "developer & designer".split(''); 
+    const jobArray = "developer &".split(''); 
+    const jobArray2 = "designer".split(''); 
 
     useEffect(() => {
         
@@ -44,6 +45,10 @@ const Home = () => {
                 <AnimatedLetters letterClass={letterClass} 
                 strArray={jobArray}
                 idx={3}/>
+                 <br />
+                <AnimatedLetters letterClass={letterClass} 
+                strArray={jobArray2}
+                idx={4}/>
                  </h1>
                  <h2>front-end - web - game - multimedia</h2>
                  <button className="flat-button"><a href="mailto:rkinsley147@gmail.com">CONTACT ME</a></button>
